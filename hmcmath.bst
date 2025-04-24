@@ -566,7 +566,7 @@ FUNCTION {format.doi}
   duplicate$ empty$ 'skip$
     {
       new.block
-      "\doi{" swap$ * "}" *
+      "\doi{ " swap$ * "}" *
     }
   if$
 }
@@ -950,7 +950,7 @@ FUNCTION {format.journal.pages}
     { swap$ duplicate$ empty$
         { pop$ pop$ format.pages }
         {
-          ":" *
+          ": " *
           swap$
           n.dashify
           "pages" bibinfo.check
